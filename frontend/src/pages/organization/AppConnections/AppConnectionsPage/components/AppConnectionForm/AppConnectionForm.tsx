@@ -29,6 +29,7 @@ import { AzureEntraIdConnectionForm } from "./AzureEntraIdConnectionForm";
 import { AzureKeyVaultConnectionForm } from "./AzureKeyVaultConnectionForm";
 import { BitbucketConnectionForm } from "./BitbucketConnectionForm";
 import { CamundaConnectionForm } from "./CamundaConnectionForm";
+import { CapyConnectionForm } from "./CapyConnectionForm";
 import { ChecklyConnectionForm } from "./ChecklyConnectionForm";
 import { ChefConnectionForm } from "./ChefConnectionForm";
 import { CircleCIConnectionForm } from "./CircleCIConnectionForm";
@@ -319,6 +320,8 @@ const CreateForm = ({ app, onComplete, projectId }: CreateFormProps) => {
         return <FireworksConnectionForm onSubmit={onSubmit} />;
       case AppConnection.Devin:
         return <DevinConnectionForm onSubmit={onSubmit} />;
+      case AppConnection.Capy:
+        return <CapyConnectionForm onSubmit={onSubmit} />;
       case AppConnection.CircleCI:
         return <CircleCIConnectionForm onSubmit={onSubmit} />;
       case AppConnection.Cloud66:
@@ -594,6 +597,8 @@ const UpdateForm = ({ appConnection, onComplete }: UpdateFormProps) => {
         return <FireworksConnectionForm onSubmit={onSubmit} appConnection={appConnection} />;
       case AppConnection.Devin:
         return <DevinConnectionForm onSubmit={onSubmit} appConnection={appConnection} />;
+      case AppConnection.Capy:
+        return <CapyConnectionForm onSubmit={onSubmit} appConnection={appConnection} />;
       case AppConnection.CircleCI:
         return <CircleCIConnectionForm onSubmit={onSubmit} appConnection={appConnection} />;
       case AppConnection.Cloud66:

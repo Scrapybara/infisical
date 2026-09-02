@@ -261,6 +261,10 @@ export const getSecretSyncDestinationColValues = (secretSync: TSecretSync) => {
       primaryText = destinationConfig.orgId;
       secondaryText = "Organization";
       break;
+    case SecretSync.Capy:
+      primaryText = destinationConfig.projectName || destinationConfig.projectId;
+      secondaryText = "Capy Project";
+      break;
     case SecretSync.Ona:
       primaryText = destinationConfig.projectName || destinationConfig.projectId;
       secondaryText = "Ona Project";

@@ -21,6 +21,7 @@ import {
   AzureDevOpsConnectionMethod,
   AzureKeyVaultConnectionMethod,
   CamundaConnectionMethod,
+  CapyConnectionMethod,
   CloudflareConnectionMethod,
   DatabricksConnectionMethod,
   DbtConnectionMethod,
@@ -539,6 +540,12 @@ export const APP_CONNECTION_MAP: Record<
     category: "AI",
     description: "Manage Devin API access."
   },
+  [AppConnection.Capy]: {
+    name: "Capy",
+    image: "Capy.png",
+    category: "AI",
+    description: "Manage Capy API access."
+  },
   [AppConnection.Ona]: {
     name: "Ona",
     image: "Ona.png",
@@ -728,6 +735,7 @@ export const getAppConnectionMethodDetails = (method: TAppConnection["method"]) 
     case LiteLLMConnectionMethod.ApiKey:
     case FireworksConnectionMethod.ApiKey:
     case DevinConnectionMethod.ApiKey:
+    case CapyConnectionMethod.ApiKey:
     case DigiCertConnectionMethod.ApiKey:
     case GoDaddyConnectionMethod.ApiKey:
     case TriggerDevConnectionMethod.ApiKey:

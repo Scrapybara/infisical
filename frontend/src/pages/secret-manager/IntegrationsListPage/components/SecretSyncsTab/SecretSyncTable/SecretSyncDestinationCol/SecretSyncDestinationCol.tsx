@@ -9,6 +9,7 @@ import { AzureEntraIdScimSyncDestinationCol } from "./AzureEntraIdScimSyncDestin
 import { AzureKeyVaultDestinationSyncCol } from "./AzureKeyVaultDestinationSyncCol";
 import { BitbucketSyncDestinationCol } from "./BitbucketSyncDestinationCol";
 import { CamundaSyncDestinationCol } from "./CamundaSyncDestinationCol";
+import { CapySyncDestinationCol } from "./CapySyncDestinationCol";
 import { ChecklySyncDestinationCol } from "./ChecklySyncDestinationCol";
 import { ChefSyncDestinationCol } from "./ChefSyncDestinationCol";
 import { CircleCISyncDestinationCol } from "./CircleCISyncDestinationCol";
@@ -137,6 +138,8 @@ export const SecretSyncDestinationCol = ({ secretSync }: Props) => {
       return <OvhSyncDestinationCol secretSync={secretSync} />;
     case SecretSync.Devin:
       return <DevinSyncDestinationCol secretSync={secretSync} />;
+    case SecretSync.Capy:
+      return <CapySyncDestinationCol secretSync={secretSync} />;
     case SecretSync.Ona:
       return <OnaSyncDestinationCol secretSync={secretSync} />;
     case SecretSync.TravisCI:

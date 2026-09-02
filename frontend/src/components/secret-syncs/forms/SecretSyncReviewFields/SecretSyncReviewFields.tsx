@@ -32,6 +32,7 @@ import { AzureEntraIdScimSyncReviewFields } from "./AzureEntraIdScimSyncReviewFi
 import { AzureKeyVaultSyncReviewFields } from "./AzureKeyVaultSyncReviewFields";
 import { BitbucketSyncReviewFields } from "./BitbucketSyncReviewFields";
 import { CamundaSyncReviewFields } from "./CamundaSyncReviewFields";
+import { CapySyncReviewFields } from "./CapySyncReviewFields";
 import { ChecklySyncReviewFields } from "./ChecklySyncReviewFields";
 import { ChefSyncReviewFields } from "./ChefSyncReviewFields";
 import { CircleCISyncReviewFields } from "./CircleCISyncReviewFields";
@@ -239,6 +240,9 @@ export const SecretSyncReviewFields = () => {
       break;
     case SecretSync.Devin:
       DestinationFieldsComponent = <DevinSyncReviewFields />;
+      break;
+    case SecretSync.Capy:
+      DestinationFieldsComponent = <CapySyncReviewFields />;
       break;
     case SecretSync.Ona:
       DestinationFieldsComponent = <OnaSyncReviewFields />;

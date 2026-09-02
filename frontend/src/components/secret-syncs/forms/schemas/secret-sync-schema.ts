@@ -9,6 +9,7 @@ import { AzureEntraIdScimSyncDestinationSchema } from "./azure-entra-id-scim-syn
 import { AzureKeyVaultSyncDestinationSchema } from "./azure-key-vault-sync-destination-schema";
 import { BitbucketSyncDestinationSchema } from "./bitbucket-sync-destination-schema";
 import { CamundaSyncDestinationSchema } from "./camunda-sync-destination-schema";
+import { CapySyncDestinationSchema } from "./capy-sync-destination-schema";
 import { ChecklySyncDestinationSchema } from "./checkly-sync-destination-schema";
 import { ChefSyncDestinationSchema } from "./chef-sync-destination-schema";
 import { CircleCISyncDestinationSchema } from "./circleci-sync-destination-schema";
@@ -90,6 +91,7 @@ const SecretSyncUnionSchema = z.discriminatedUnion("destination", [
   ExternalInfisicalSyncDestinationSchema,
   OvhSyncDestinationSchema,
   DevinSyncDestinationSchema,
+  CapySyncDestinationSchema,
   OnaSyncDestinationSchema,
   TravisCISyncDestinationSchema,
   SnowflakeSyncDestinationSchema,

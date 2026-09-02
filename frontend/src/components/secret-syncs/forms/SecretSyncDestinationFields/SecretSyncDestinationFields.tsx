@@ -12,6 +12,7 @@ import { AzureEntraIdScimSyncFields } from "./AzureEntraIdScimSyncFields";
 import { AzureKeyVaultSyncFields } from "./AzureKeyVaultSyncFields";
 import { BitbucketSyncFields } from "./BitbucketSyncFields";
 import { CamundaSyncFields } from "./CamundaSyncFields";
+import { CapySyncFields } from "./CapySyncFields";
 import { ChecklySyncFields } from "./ChecklySyncFields";
 import { ChefSyncFields } from "./ChefSyncFields";
 import { CircleCISyncFields } from "./CircleCISyncFields";
@@ -138,6 +139,8 @@ export const SecretSyncDestinationFields = () => {
       return <OvhSyncFields />;
     case SecretSync.Devin:
       return <DevinSyncFields />;
+    case SecretSync.Capy:
+      return <CapySyncFields />;
     case SecretSync.Ona:
       return <OnaSyncFields />;
     case SecretSync.TravisCI:

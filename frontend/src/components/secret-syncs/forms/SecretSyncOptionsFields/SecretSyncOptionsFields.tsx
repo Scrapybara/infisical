@@ -147,6 +147,7 @@ export const SecretSyncOptionsFields = ({ hideInitialSync, children }: Props) =>
     case SecretSync.ExternalInfisical:
     case SecretSync.OVH:
     case SecretSync.Devin:
+    case SecretSync.Capy:
     case SecretSync.Ona:
     case SecretSync.TravisCI:
     case SecretSync.Snowflake:

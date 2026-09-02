@@ -14,6 +14,7 @@ import { TAzureEntraIdConnection } from "./azure-entra-id-connection";
 import { TAzureKeyVaultConnection } from "./azure-key-vault-connection";
 import { TBitbucketConnection } from "./bitbucket-connection";
 import { TCamundaConnection } from "./camunda-connection";
+import { TCapyConnection } from "./capy-connection";
 import { TChecklyConnection } from "./checkly-connection";
 import { TChefConnection } from "./chef-connection";
 import { TCircleCIConnection } from "./circleci-connection";
@@ -97,6 +98,7 @@ export * from "./azure-entra-id-connection";
 export * from "./azure-key-vault-connection";
 export * from "./bitbucket-connection";
 export * from "./camunda-connection";
+export * from "./capy-connection";
 export * from "./checkly-connection";
 export * from "./chef-connection";
 export * from "./circleci-connection";
@@ -232,6 +234,7 @@ export type TAppConnection =
   | TDopplerConnection
   | TOvhConnection
   | TDevinConnection
+  | TCapyConnection
   | TOnaConnection
   | TDigiCertConnection
   | TGoDaddyConnection

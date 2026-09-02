@@ -13,6 +13,7 @@ import { AzureEntraIdScimSyncDestinationSection } from "./AzureEntraIdScimSyncDe
 import { AzureKeyVaultSyncDestinationSection } from "./AzureKeyVaultSyncDestinationSection";
 import { BitbucketSyncDestinationSection } from "./BitbucketSyncDestinationSection";
 import { CamundaSyncDestinationSection } from "./CamundaSyncDestinationSection";
+import { CapySyncDestinationSection } from "./CapySyncDestinationSection";
 import { ChecklySyncDestinationSection } from "./ChecklySyncDestinationSection";
 import { ChefSyncDestinationSection } from "./ChefSyncDestinationSection";
 import { CircleCISyncDestinationSection } from "./CircleCISyncDestinationSection";
@@ -190,6 +191,9 @@ export const SecretSyncDestinationSection = ({ secretSync }: Props) => {
       break;
     case SecretSync.Devin:
       DestinationComponents = <DevinSyncDestinationSection secretSync={secretSync} />;
+      break;
+    case SecretSync.Capy:
+      DestinationComponents = <CapySyncDestinationSection secretSync={secretSync} />;
       break;
     case SecretSync.Ona:
       DestinationComponents = <OnaSyncDestinationSection secretSync={secretSync} />;

@@ -258,6 +258,12 @@ export const SECRET_SYNC_MAP: Record<
     category: "AI",
     description: "Organization secrets for Devin agents."
   },
+  [SecretSync.Capy]: {
+    name: "Capy",
+    image: "Capy.png",
+    category: "AI",
+    description: "Project environment variables for Capy agents."
+  },
   [SecretSync.Ona]: {
     name: "Ona",
     image: "Ona.png",
@@ -357,6 +363,7 @@ export const SECRET_SYNC_CONNECTION_MAP: Record<SecretSync, AppConnection> = {
   [SecretSync.ExternalInfisical]: AppConnection.ExternalInfisical,
   [SecretSync.OVH]: AppConnection.OVH,
   [SecretSync.Devin]: AppConnection.Devin,
+  [SecretSync.Capy]: AppConnection.Capy,
   [SecretSync.Ona]: AppConnection.Ona,
   [SecretSync.TravisCI]: AppConnection.TravisCI,
   [SecretSync.Snowflake]: AppConnection.Snowflake,

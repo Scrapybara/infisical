@@ -10,6 +10,7 @@ import { TAzureEntraIdScimSync } from "./azure-entra-id-scim-sync";
 import { TAzureKeyVaultSync } from "./azure-key-vault-sync";
 import { TBitbucketSync } from "./bitbucket-sync";
 import { TCamundaSync } from "./camunda-sync";
+import { TCapySync } from "./capy-sync";
 import { TChecklySync } from "./checkly-sync";
 import { TChefSync } from "./chef-sync";
 import { TCircleCISync } from "./circleci-sync";
@@ -101,6 +102,7 @@ export type TSecretSync =
   | TExternalInfisicalSync
   | TOvhSync
   | TDevinSync
+  | TCapySync
   | TOnaSync
   | TTravisCISync
   | TSnowflakeSync

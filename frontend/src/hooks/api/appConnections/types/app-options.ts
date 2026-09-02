@@ -289,6 +289,10 @@ export type TDevinConnectionOption = TAppConnectionOptionBase & {
   app: AppConnection.Devin;
 };
 
+export type TCapyConnectionOption = TAppConnectionOptionBase & {
+  app: AppConnection.Capy;
+};
+
 export type TOnaConnectionOption = TAppConnectionOptionBase & {
   app: AppConnection.Ona;
 };
@@ -412,6 +416,7 @@ export type TAppConnectionOption =
   | TAnthropicConnectionOption
   | TOvhConnectionOption
   | TDevinConnectionOption
+  | TCapyConnectionOption
   | TOnaConnectionOption
   | TDigiCertConnectionOption
   | TGoDaddyConnectionOption
@@ -497,6 +502,7 @@ export type TAppConnectionOptionMap = {
   [AppConnection.Anthropic]: TAnthropicConnectionOption;
   [AppConnection.OVH]: TOvhConnectionOption;
   [AppConnection.Devin]: TDevinConnectionOption;
+  [AppConnection.Capy]: TCapyConnectionOption;
   [AppConnection.Ona]: TOnaConnectionOption;
   [AppConnection.DigiCert]: TDigiCertConnectionOption;
   [AppConnection.GoDaddy]: TGoDaddyConnectionOption;
