@@ -146,7 +146,7 @@ export const CapyConnectionForm = ({ appConnection, onSubmit }: Props) => {
           )}
         />
         <AppConnectionFormFooter
-          submitLabel={isUpdate ? "Update Credentials" : "Connect to Trigger.dev"}
+          submitLabel={isUpdate ? "Update Credentials" : "Connect to Capy"}
         />
       </form>
     </FormProvider>
