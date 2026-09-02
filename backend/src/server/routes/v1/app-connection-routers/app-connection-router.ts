@@ -61,6 +61,7 @@ import {
   CamundaConnectionListItemSchema,
   SanitizedCamundaConnectionSchema
 } from "@app/services/app-connection/camunda";
+import { CapyConnectionListItemSchema, SanitizedCapyConnectionSchema } from "@app/services/app-connection/capy";
 import {
   ChecklyConnectionListItemSchema,
   SanitizedChecklyConnectionSchema
@@ -322,6 +323,7 @@ const SanitizedAppConnectionSchema = z.union([
   ...SanitizedOpenAIConnectionSchema.options,
   ...SanitizedAnthropicConnectionSchema.options,
   ...SanitizedDevinConnectionSchema.options,
+  ...SanitizedCapyConnectionSchema.options,
   ...SanitizedAzureEntraIdConnectionSchema.options,
   ...SanitizedMicrosoftIntuneConnectionSchema.options,
   ...SanitizedVenafiConnectionSchema.options,
@@ -417,6 +419,7 @@ const AppConnectionOptionsSchema = z.discriminatedUnion("app", [
   AnthropicConnectionListItemSchema,
   OvhConnectionListItemSchema,
   DevinConnectionListItemSchema,
+  CapyConnectionListItemSchema,
   OnaConnectionListItemSchema,
   DigiCertConnectionListItemSchema,
   GoDaddyConnectionListItemSchema,

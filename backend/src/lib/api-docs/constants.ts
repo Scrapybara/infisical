@@ -2877,6 +2877,10 @@ export const AppConnections = {
     DEVIN: {
       apiKey: "The Devin service-user API key used to authenticate against the Devin v3 API."
     },
+    CAPY: {
+      apiKey: "The Capy API key (capy_...) used to authenticate against the Capy public API.",
+      instanceUrl: "The URL of the Capy instance to connect to. Defaults to https://api.capy.ai."
+    },
     GITLAB: {
       instanceUrl: "The GitLab instance URL to connect with.",
       accessToken: "The Access Token used to access GitLab.",
@@ -3289,6 +3293,10 @@ export const SecretSyncs = {
     },
     DEVIN: {
       orgId: "The Devin organization ID to sync secrets to."
+    },
+    CAPY: {
+      projectId: "The Capy project ID to sync secrets to.",
+      projectName: "The name of the Capy project to sync secrets to."
     },
     GITLAB: {
       projectId: "The GitLab Project ID to sync secrets to.",

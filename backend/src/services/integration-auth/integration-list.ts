@@ -101,6 +101,7 @@ export enum IntegrationUrls {
   HUMANITEC_API_URL = "https://api.humanitec.io",
   CAMUNDA_API_URL = "https://api.cloud.camunda.io",
   DEVIN_API_URL = "https://api.devin.ai",
+  CAPY_API_URL = "https://api.capy.ai",
   DIGICERT_SERVICES_API_URL = "https://www.digicert.com/services/v2",
   DIGICERT_SERVICES_API_URL_EU = "https://certcentral.digicert.eu/services/v2",
 

@@ -63,6 +63,7 @@ export enum AppConnection {
   Anthropic = "anthropic",
   OVH = "ovh",
   Devin = "devin",
+  Capy = "capy",
   Ona = "ona",
   DigiCert = "digicert",
   TravisCI = "travis-ci",

@@ -28,6 +28,7 @@ import {
 import { AzureKeyVaultSyncListItemSchema, AzureKeyVaultSyncSchema } from "@app/services/secret-sync/azure-key-vault";
 import { BitbucketSyncListItemSchema, BitbucketSyncSchema } from "@app/services/secret-sync/bitbucket";
 import { CamundaSyncListItemSchema, CamundaSyncSchema } from "@app/services/secret-sync/camunda";
+import { CapySyncListItemSchema, CapySyncSchema } from "@app/services/secret-sync/capy";
 import { ChecklySyncListItemSchema, ChecklySyncSchema } from "@app/services/secret-sync/checkly/checkly-sync-schemas";
 import { CircleCISyncListItemSchema, CircleCISyncSchema } from "@app/services/secret-sync/circleci";
 import { Cloud66SyncListItemSchema, Cloud66SyncSchema } from "@app/services/secret-sync/cloud66";
@@ -123,6 +124,7 @@ const SecretSyncSchema = z.discriminatedUnion("destination", [
   ExternalInfisicalSyncSchema,
   OvhSyncSchema,
   DevinSyncSchema,
+  CapySyncSchema,
   OnaSyncSchema,
   TravisCISyncSchema,
   SnowflakeSyncSchema,
@@ -174,6 +176,7 @@ const SecretSyncOptionsSchema = z.discriminatedUnion("destination", [
   ExternalInfisicalSyncListItemSchema,
   OvhSyncListItemSchema,
   DevinSyncListItemSchema,
+  CapySyncListItemSchema,
   OnaSyncListItemSchema,
   TravisCISyncListItemSchema,
   SnowflakeSyncListItemSchema,

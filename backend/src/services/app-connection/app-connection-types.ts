@@ -107,6 +107,12 @@ import {
   TValidateCamundaConnectionCredentialsSchema
 } from "./camunda";
 import {
+  TCapyConnection,
+  TCapyConnectionConfig,
+  TCapyConnectionInput,
+  TValidateCapyConnectionCredentialsSchema
+} from "./capy";
+import {
   TChecklyConnection,
   TChecklyConnectionConfig,
   TChecklyConnectionInput,
@@ -562,6 +568,7 @@ export type TAppConnection = { id: string; configuration?: TAppConnectionConfigu
   | TAnthropicConnection
   | TOvhConnection
   | TDevinConnection
+  | TCapyConnection
   | TOnaConnection
   | TDigiCertConnection
   | TGoDaddyConnection
@@ -656,6 +663,7 @@ export type TAppConnectionInput = { id: string } & (
   | TAnthropicConnectionInput
   | TOvhConnectionInput
   | TDevinConnectionInput
+  | TCapyConnectionInput
   | TOnaConnectionInput
   | TDigiCertConnectionInput
   | TGoDaddyConnectionInput
@@ -782,6 +790,7 @@ export type TAppConnectionConfig =
   | TAnthropicConnectionConfig
   | TOvhConnectionConfig
   | TDevinConnectionConfig
+  | TCapyConnectionConfig
   | TOnaConnectionConfig
   | TDigiCertConnectionConfig
   | TGoDaddyConnectionConfig
@@ -867,6 +876,7 @@ export type TValidateAppConnectionCredentialsSchema =
   | TValidateAnthropicConnectionCredentialsSchema
   | TValidateOvhConnectionCredentialsSchema
   | TValidateDevinConnectionCredentialsSchema
+  | TValidateCapyConnectionCredentialsSchema
   | TValidateOnaConnectionCredentialsSchema
   | TValidateDigiCertConnectionCredentialsSchema
   | TValidateGoDaddyConnectionCredentialsSchema

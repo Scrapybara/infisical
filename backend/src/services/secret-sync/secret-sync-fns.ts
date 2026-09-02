@@ -48,6 +48,7 @@ import {
 import { AZURE_KEY_VAULT_SYNC_LIST_OPTION, azureKeyVaultSyncFactory } from "./azure-key-vault";
 import { BITBUCKET_SYNC_LIST_OPTION, BitbucketSyncFns } from "./bitbucket";
 import { CAMUNDA_SYNC_LIST_OPTION, camundaSyncFactory } from "./camunda";
+import { CAPY_SYNC_LIST_OPTION, CapySyncFns } from "./capy";
 import { CHECKLY_SYNC_LIST_OPTION } from "./checkly/checkly-sync-constants";
 import { ChecklySyncFns } from "./checkly/checkly-sync-fns";
 import { CIRCLECI_SYNC_LIST_OPTION, CircleCISyncFns } from "./circleci";
@@ -136,6 +137,7 @@ const SECRET_SYNC_LIST_OPTIONS: Record<SecretSync, TSecretSyncListItem> = {
   [SecretSync.ExternalInfisical]: EXTERNAL_INFISICAL_SYNC_LIST_OPTION,
   [SecretSync.OVH]: OVH_SYNC_LIST_OPTION,
   [SecretSync.Devin]: DEVIN_SYNC_LIST_OPTION,
+  [SecretSync.Capy]: CAPY_SYNC_LIST_OPTION,
   [SecretSync.Ona]: ONA_SYNC_LIST_OPTION,
   [SecretSync.TravisCI]: TRAVIS_CI_SYNC_LIST_OPTION,
   [SecretSync.Snowflake]: SNOWFLAKE_SYNC_LIST_OPTION,
@@ -439,6 +441,8 @@ export const SecretSyncFns = {
         return OvhSyncFns.syncSecrets(secretSync, schemaSecretMap);
       case SecretSync.Devin:
         return DevinSyncFns.syncSecrets(secretSync, schemaSecretMap);
+      case SecretSync.Capy:
+        return CapySyncFns.syncSecrets(secretSync, schemaSecretMap);
       case SecretSync.Ona:
         return OnaSyncFns.syncSecrets(secretSync, schemaSecretMap);
       case SecretSync.TravisCI:
@@ -609,6 +613,9 @@ export const SecretSyncFns = {
       case SecretSync.Devin:
         secretMap = await DevinSyncFns.getSecrets(secretSync);
         break;
+      case SecretSync.Capy:
+        secretMap = await CapySyncFns.getSecrets(secretSync);
+        break;
       case SecretSync.Ona:
         secretMap = await OnaSyncFns.getSecrets();
         break;
@@ -769,6 +776,8 @@ export const SecretSyncFns = {
         return OvhSyncFns.removeSecrets(secretSync, schemaSecretMap);
       case SecretSync.Devin:
         return DevinSyncFns.removeSecrets(secretSync, schemaSecretMap);
+      case SecretSync.Capy:
+        return CapySyncFns.removeSecrets(secretSync, schemaSecretMap);
       case SecretSync.Ona:
         return OnaSyncFns.removeSecrets(secretSync, schemaSecretMap);
       case SecretSync.TravisCI:

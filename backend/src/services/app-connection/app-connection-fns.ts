@@ -95,6 +95,7 @@ import {
 } from "./bitbucket";
 import { CamundaConnectionMethod } from "./camunda";
 import { getCamundaConnectionListItem, validateCamundaConnectionCredentials } from "./camunda/camunda-connection-fns";
+import { CapyConnectionMethod, getCapyConnectionListItem, validateCapyConnectionCredentials } from "./capy";
 import { ChecklyConnectionMethod, getChecklyConnectionListItem, validateChecklyConnectionCredentials } from "./checkly";
 import {
   CircleCIConnectionMethod,
@@ -399,6 +400,7 @@ export const listAppConnectionOptions = (projectType?: ProjectType) => {
     getOpenAIConnectionListItem(),
     getAnthropicConnectionListItem(),
     getDevinConnectionListItem(),
+    getCapyConnectionListItem(),
     getCircleCIConnectionListItem(),
     getCloud66ConnectionListItem(),
     getAzureEntraIdConnectionListItem(),
@@ -643,6 +645,7 @@ export const validateAppConnectionCredentials = async (
     [AppConnection.OpenAI]: validateOpenAIConnectionCredentials as TAppConnectionCredentialsValidator,
     [AppConnection.Anthropic]: validateAnthropicConnectionCredentials as TAppConnectionCredentialsValidator,
     [AppConnection.Devin]: validateDevinConnectionCredentials as TAppConnectionCredentialsValidator,
+    [AppConnection.Capy]: validateCapyConnectionCredentials as TAppConnectionCredentialsValidator,
     [AppConnection.CircleCI]: validateCircleCIConnectionCredentials as TAppConnectionCredentialsValidator,
     [AppConnection.Cloud66]: validateCloud66ConnectionCredentials as TAppConnectionCredentialsValidator,
     [AppConnection.AzureEntraId]: validateAzureEntraIdConnectionCredentials as TAppConnectionCredentialsValidator,
@@ -781,6 +784,7 @@ export const getAppConnectionMethodName = (method: TAppConnection["method"]) => 
     case LiteLLMConnectionMethod.ApiKey:
     case FireworksConnectionMethod.ApiKey:
     case DevinConnectionMethod.ApiKey:
+    case CapyConnectionMethod.ApiKey:
     case DigiCertConnectionMethod.ApiKey:
     case GoDaddyConnectionMethod.ApiKey:
     case TriggerDevConnectionMethod.ApiKey:
@@ -922,6 +926,7 @@ export const TRANSITION_CONNECTION_CREDENTIALS_TO_PLATFORM: Record<
   [AppConnection.OpenAI]: platformManagedCredentialsNotSupported,
   [AppConnection.Anthropic]: platformManagedCredentialsNotSupported,
   [AppConnection.Devin]: platformManagedCredentialsNotSupported,
+  [AppConnection.Capy]: platformManagedCredentialsNotSupported,
   [AppConnection.CircleCI]: platformManagedCredentialsNotSupported,
   [AppConnection.Cloud66]: platformManagedCredentialsNotSupported,
   [AppConnection.AzureEntraId]: platformManagedCredentialsNotSupported,

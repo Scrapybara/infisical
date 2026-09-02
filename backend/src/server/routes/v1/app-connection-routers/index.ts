@@ -17,6 +17,7 @@ import { registerAzureEntraIdConnectionRouter } from "./azure-entra-id-connectio
 import { registerAzureKeyVaultConnectionRouter } from "./azure-key-vault-connection-router";
 import { registerBitbucketConnectionRouter } from "./bitbucket-connection-router";
 import { registerCamundaConnectionRouter } from "./camunda-connection-router";
+import { registerCapyConnectionRouter } from "./capy-connection-router";
 import { registerChecklyConnectionRouter } from "./checkly-connection-router";
 import { registerCircleCIConnectionRouter } from "./circleci-connection-router";
 import { registerCloud66ConnectionRouter } from "./cloud-66-connection-router";
@@ -155,6 +156,7 @@ export const APP_CONNECTION_REGISTER_ROUTER_MAP: Record<AppConnection, (server: 
     [AppConnection.Anthropic]: registerAnthropicConnectionRouter,
     [AppConnection.OVH]: registerOvhConnectionRouter,
     [AppConnection.Devin]: registerDevinConnectionRouter,
+    [AppConnection.Capy]: registerCapyConnectionRouter,
     [AppConnection.Ona]: registerOnaConnectionRouter,
     [AppConnection.DigiCert]: registerDigiCertConnectionRouter,
     [AppConnection.GoDaddy]: registerGoDaddyConnectionRouter,

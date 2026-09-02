@@ -11,6 +11,7 @@ import { registerAzureEntraIdScimSyncRouter } from "./azure-entra-id-scim-sync-r
 import { registerAzureKeyVaultSyncRouter } from "./azure-key-vault-sync-router";
 import { registerBitbucketSyncRouter } from "./bitbucket-sync-router";
 import { registerCamundaSyncRouter } from "./camunda-sync-router";
+import { registerCapySyncRouter } from "./capy-sync-router";
 import { registerChecklySyncRouter } from "./checkly-sync-router";
 import { registerCircleCISyncRouter } from "./circleci-sync-router";
 import { registerCloud66SyncRouter } from "./cloud66-sync-router";
@@ -93,6 +94,7 @@ export const SECRET_SYNC_REGISTER_ROUTER_MAP: Record<SecretSync, (server: Fastif
   [SecretSync.ExternalInfisical]: registerExternalInfisicalSyncRouter,
   [SecretSync.OVH]: registerOvhSyncRouter,
   [SecretSync.Devin]: registerDevinSyncRouter,
+  [SecretSync.Capy]: registerCapySyncRouter,
   [SecretSync.Ona]: registerOnaSyncRouter,
   [SecretSync.TravisCI]: registerTravisCISyncRouter,
   [SecretSync.Snowflake]: registerSnowflakeSyncRouter,

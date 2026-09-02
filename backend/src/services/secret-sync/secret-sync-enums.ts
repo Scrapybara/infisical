@@ -39,6 +39,7 @@ export enum SecretSync {
   ExternalInfisical = "external-infisical",
   OVH = "ovh",
   Devin = "devin",
+  Capy = "capy",
   Ona = "ona",
   TravisCI = "travis-ci",
   Snowflake = "snowflake",

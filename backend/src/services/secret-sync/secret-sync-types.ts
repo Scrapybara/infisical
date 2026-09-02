@@ -94,6 +94,7 @@ import {
   TBitbucketSyncListItem,
   TBitbucketSyncWithCredentials
 } from "./bitbucket/bitbucket-sync-types";
+import { TCapySync, TCapySyncInput, TCapySyncListItem, TCapySyncWithCredentials } from "./capy/capy-sync-types";
 import {
   TChecklySync,
   TChecklySyncInput,
@@ -275,6 +276,7 @@ export type TSecretSync =
   | TExternalInfisicalSync
   | TOvhSync
   | TDevinSync
+  | TCapySync
   | TOnaSync
   | TTravisCISync
   | TSnowflakeSync
@@ -325,6 +327,7 @@ export type TSecretSyncWithCredentials =
   | TExternalInfisicalSyncWithCredentials
   | TOvhSyncWithCredentials
   | TDevinSyncWithCredentials
+  | TCapySyncWithCredentials
   | TOnaSyncWithCredentials
   | TTravisCISyncWithCredentials
   | TSnowflakeSyncWithCredentials
@@ -375,6 +378,7 @@ export type TSecretSyncInput =
   | TExternalInfisicalSyncInput
   | TOvhSyncInput
   | TDevinSyncInput
+  | TCapySyncInput
   | TOnaSyncInput
   | TTravisCISyncInput
   | TSnowflakeSyncInput
@@ -425,6 +429,7 @@ export type TSecretSyncListItem =
   | TExternalInfisicalSyncListItem
   | TOvhSyncListItem
   | TDevinSyncListItem
+  | TCapySyncListItem
   | TOnaSyncListItem
   | TTravisCISyncListItem
   | TSnowflakeSyncListItem
