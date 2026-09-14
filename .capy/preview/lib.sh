@@ -29,6 +29,13 @@ preview_input_hash() {
         ':(exclude)frontend/src/**' \
         ':(exclude)frontend/public/**' \
         ':(exclude)frontend/index.html'
+      while IFS= read -r -d '' path; do
+        case "$path" in
+          backend/src/*|frontend/src/*|frontend/public/*|frontend/index.html) continue ;;
+        esac
+        printf '%s\0' "$path"
+        sha256sum "$path"
+      done < <(git ls-files --others --exclude-standard -z -- backend frontend)
     } | sha256sum | awk '{print $1}'
   )
 }
