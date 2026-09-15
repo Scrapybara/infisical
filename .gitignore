@@ -1,6 +1,8 @@
 # backend
 node_modules
 .env
+.capy/preview/.docker-inputs.sha256
+.capy/preview/.env
 .env.test
 .env.dev
 .env.gamma

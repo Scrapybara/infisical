@@ -1,0 +1,42 @@
+services:
+  nginx:
+    image: nginx:1.29-alpine
+    restart: unless-stopped
+
+  db:
+    image: postgres:14-alpine
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U infisical -d infisical"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  redis:
+    image: redis:8-alpine
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  backend:
+    image: infisical-preview-backend:local
+    restart: unless-stopped
+    env_file:
+      - .capy/preview/.env
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  frontend:
+    image: infisical-preview-frontend:local
+    restart: unless-stopped
+    env_file:
+      - .capy/preview/.env
+    depends_on:
+      backend:
+        condition: service_healthy
